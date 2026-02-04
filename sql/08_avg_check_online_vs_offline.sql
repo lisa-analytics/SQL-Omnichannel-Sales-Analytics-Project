@@ -1,3 +1,6 @@
+-- Purpose: Compare average order values between online and offline purchases
+-- Output: purchase_type, avg_check
+
 select purchase_type, AVG(order_total) as avg_check
 from(
 select 'online' as purchase_type, osp.order_id, 
