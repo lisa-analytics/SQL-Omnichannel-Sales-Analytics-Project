@@ -1,21 +1,35 @@
-# SQL Sales Analytics Project (Online & Offline Transactions)
+# SQL Omnichannel Sales Analytics Project
 
-Stack: PostgreSQL, SQL (CTEs, joins, subqueries, aggregations)
+## Overview
+This project analyzes customer purchasing behavior across online and offline sales channels using PostgreSQL.
+The goal is to identify high-value customers, cross-channel behavior, and product performance trends.
 
-## Goal
-Analyze customer and product behavior across online and offline sales channels.
+## Tech Stack
+- PostgreSQL
+- SQL (joins, CTEs, aggregations, set operations)
 
 ## Dataset
 - 51 customers
 - 400+ orders
-- January–April transactions
+- Time period: January–April
+- Channels: Online & Offline
+
+## Business Questions Answered
+- Who are the top-spending customers?
+- Which products sell across both online and offline channels?
+- How does average order value differ by channel?
+- Which customers consistently exceed offline average spend?
+- How do high-value buyers trend over time?
+
+## Project Structure
+- /sql – analytical SQL queries (one question per file)
+- /insights – summarized business findings
 
 ## Key Insights
-- Top customer spend: 670,000+
-- Cross-channel products: 25
-- AOV: offline ~92,000 vs online ~50,000
-- Monthly high-value buyers trend
-- Top 3 products by unique customers
+- Top customer total spend exceeded 670,000
+- 25 products were sold in both online and offline channels
+- Offline AOV is significantly higher than online
+- High-value buyers show seasonal clustering by month
 
-## Structure
-/sql – SQL queries  
+## How to Run
+Queries are written for PostgreSQL and can be executed independently.
