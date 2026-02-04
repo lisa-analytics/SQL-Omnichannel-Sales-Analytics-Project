@@ -1,2 +1,21 @@
-# SQL-Omnichannel-Sales-Analytics-Project
-End-to-end SQL analytics project focused on omnichannel customer behavior across online and offline sales platforms, delivering key business KPIs such as average order value, revenue distribution, product popularity, and high-value customer trends.
+# SQL Sales Analytics Project (Online & Offline Transactions)
+
+Stack: PostgreSQL, SQL (CTEs, joins, subqueries, aggregations)
+
+## Goal
+Analyze customer and product behavior across online and offline sales channels.
+
+## Dataset
+- 51 customers
+- 400+ orders
+- January–April transactions
+
+## Key Insights
+- Top customer spend: 670,000+
+- Cross-channel products: 25
+- AOV: offline ~92,000 vs online ~50,000
+- Monthly high-value buyers trend
+- Top 3 products by unique customers
+
+## Structure
+/sql – SQL queries  
