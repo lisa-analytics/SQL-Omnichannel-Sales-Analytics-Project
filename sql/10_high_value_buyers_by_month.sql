@@ -1,3 +1,6 @@
+-- Purpose: Count users making above-average value orders per month across all sales channels
+-- Output: month_of_year, buyers_count
+
 with all_orders as (
 select osp.order_id, osp.user_id, osp.order_date, 
 SUM(oisp.quantity * psp.product_price) as order_total
@@ -15,10 +18,10 @@ group by so.store_order_id , so.user_id, so.order_date),
 avg_check as (
 select AVG(order_total) as avg_total
 from all_orders) 
-select extract (month from order_date) as month, 
+select date_trunc ('month', order_date) as year_month, 
 COUNT(distinct user_id) as buyers_count
 from all_orders 
 where order_total > (select avg_total from avg_check)
 and user_id is not null 
-group by month
-order by month;
+group by year_month
+order by year_month;
