@@ -1,3 +1,6 @@
+-- Purpose: Identify the top 3 most popular products based on number of unique buyers across all channels
+-- Output: product_id, unique_users
+
 select product_id, COUNT(distinct user_id) as unique_users
 from (
 select oisp.product_id, osp.user_id
