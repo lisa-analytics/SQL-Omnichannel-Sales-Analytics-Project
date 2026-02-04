@@ -1,3 +1,6 @@
+-- Purpose: Calculate the average order value for paid online purchases
+-- Output: avg_check
+
 select AVG(order_total) as avg_check
 from (
 select osp.order_id, 
