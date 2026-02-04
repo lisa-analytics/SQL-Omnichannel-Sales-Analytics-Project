@@ -1,3 +1,6 @@
+-- Purpose: Calculate total online spending per user and rank users by highest spending
+-- Output: user_id, total_spent
+
 select osp.user_id, 
 SUM (oisp.quantity * psp.product_price) as total_spent
 from orders_sql_project osp
